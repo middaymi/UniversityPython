@@ -17,11 +17,21 @@ def check(lst):
             return 1
 
 
+# check to exit
+def to_exit(lst):
+    if len(lst) == 1 and int(lst[0]) == 0:
+        exit(0)
+
+
 while True:
     # get coordinates
     print("\nTo exit enter 0\nOr enter coordinates by space and value = [0,7] and the format is: x y")
+
     current = (input("Current position: ")).strip().split()
+    to_exit(current)
+
     wish = (input("Desired position: ")).strip().split()
+    to_exit(wish)
 
     try:
         # to do numeric lists
