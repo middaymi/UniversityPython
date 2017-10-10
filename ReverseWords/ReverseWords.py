@@ -1,3 +1,7 @@
+# Goldobina Svetlana
+#
+# reverse the place of words
+
 while True:
     input_str = input("\nTo exit enter 0\nOr enter two words separated by a space: ")
 
