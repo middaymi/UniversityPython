@@ -6,14 +6,10 @@ while True:
     # input string
     str = input("\nTo exit enter 0\nOr enter a string: ")
 
-    # if not one word
-    if len(str.split()) != 1:
-        print("Enter one word, try again")
-        continue
-
     # if want to exit
-    elif str.isdigit() and int(str) == 0: exit(0)
+    if str.isdigit() and int(str) == 0: exit(0)
 
-    # del characters
-    str = ''.join([x for x in str if x != "@"])
+    # Up characters
+    str = str.replace("@", "")
+
     print(str)
