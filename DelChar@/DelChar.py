@@ -10,6 +10,6 @@ while True:
     if str.isdigit() and int(str) == 0: exit(0)
 
     # Up characters
-    str = str.replace("@", "")
+    str = str.replace("h", "H")
 
     print(str)

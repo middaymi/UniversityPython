@@ -10,8 +10,8 @@ while True:
     if str.isdigit() and int(str) == 0: exit(0)
 
     # find the first and the last index of h-element
-    left = str.find('h', 0, len(str))
-    right = str.rfind('h', 0, len(str))
+    left = str.find('h')
+    right = str.rfind('h')
 
     # print modify string
     print(str[0:left+1] + str[left+1:right].replace("h", "H") + str[right:len(str)])

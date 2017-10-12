@@ -12,8 +12,8 @@ def check(lst):
         return 1
 
     for i in lst:
-        if i < 0 or i >= 8:
-            print("Number %d not in range[0, 7]. Try again!" % i)
+        if 1 <= i <= 8:
+            print("Number %d not in range[1, 8]. Try again!" % i)
             return 1
 
 
