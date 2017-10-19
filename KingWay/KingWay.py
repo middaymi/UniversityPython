@@ -50,7 +50,7 @@ while True:
         continue
 
     # all conditions are passed, check new way
-    if -1 <= current[0] - wish[0] <= 1 and -1 <= current[1] - wish[1] <= 1:
+    if current[0] - wish[0] <= abs(1) and current[1] - wish[1] <= abs(1):
         print("YES")
     else:
         print("NO")
