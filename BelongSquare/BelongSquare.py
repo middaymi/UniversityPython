@@ -1,3 +1,8 @@
+# Goldobina Svetlana
+#
+# check that an input point in square
+
+
 # check a point in square
 def is_point_in_square(i, j):
     return abs(i) + abs(j) <= 1
