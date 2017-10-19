@@ -1,15 +1,15 @@
 # Goldobina Svetlana
 #
-# Delete the character which index %3 == 0
+# Delete a character @
 
 while True:
-    # input string
+    # input a string
     str = input("\nTo exit enter 0\nOr enter a string: ")
 
-    # if want to exit
+    # exit case
     if str.isdigit() and int(str) == 0: exit(0)
 
-    # Up characters
-    str = str.replace("h", "H")
+    # delete @
+    str = str.replace("@", "")
 
     print(str)
