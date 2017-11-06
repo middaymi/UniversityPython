@@ -4,14 +4,15 @@
 while True:
     try:
         # input a list
-        lst = input("(To close the app input \"exit\")\n"
-                    "Enter an array of numbers without common and press enter: ").split()
+        lst = input("\n== To close the app input \"exit\" ==\n"
+                    "Enter an array of numbers without commas and press enter: ").split()
 
         # exit mode
         if lst[0] == "exit": exit(0)
 
         # choose numbers
         lst = list(filter(lambda x: x.isdigit(), lst))
+        print("Final array: ", lst)
 
         # set started values of number and index
         max = lst[0]
@@ -24,7 +25,7 @@ while True:
                 max_index = i
 
         # print result
-        print("value: ", max, "index = ", max_index)
+        print("max_value:", max, "index:", max_index)
 
     # empty list, list of chars, punctuations
     except IndexError:
