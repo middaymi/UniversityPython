@@ -2,7 +2,6 @@
 #
 # find local maximums in an array
 # local maximum - the number which is greater than its neighbor
-# border values â€‹â€‹are compared with one neighbor
 
 
 # print result and clear data
