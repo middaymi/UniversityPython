@@ -4,52 +4,39 @@
 # local maximum - the number which is greater than its neighbor
 
 
-# print result and clear data
-def print_clear_data(lst, dis):
-    if len(lst) != 0:
-        print("list:", lst)
-        if len(dis) != 0:
-            print("distance list:", dis,
-                  "\nmin distance:", min(dis))
-            dis.clear()
-        else:
-            print("min distance:", 0)
-        lst.clear()
-
-
-# find min distance between neighbors
-def find_min_distance(lst, dis, index):
-    for i in range(1, len(lst) - 1):
-        if lst[i - 1] < lst[i] > lst[i + 1]:
-            if i != 1:
-                dis.append(i - index)
-            index = i
+def print_result():
+    print("list =", list)
+    print("min distance =", min_dist, "\n***\n")
 
 
 # getting a list as str from keyboard
-def input_check_array(lst):
-    print("\nEnter values:")
+def input_check_array():
+    print("Input:")
     while True:
         current = input().strip()
         # exit mode
         if current.strip() == "exit":
             exit(0)
-
         if int(current) != 0:
-            lst.append(int(current))
+            list.append(int(current))
         else:
             break
 
 
-array = []
-distance = []
-index_of_localmax = 0
-
 while True:
+    index_localmax = -1
+    min_dist = 0
+    list = []
     try:
-        input_check_array(array)
-        find_min_distance(array, distance, index_of_localmax)
-        print_clear_data(array, distance)
-
+        input_check_array()
+        # find min distance between neighbors
+        for i in range(1, len(list) - 1):
+            if list[i - 1] < list[i] > list[i + 1]:
+                if index_localmax != -1:
+                    dist = i - index_localmax
+                    if min_dist > dist or min_dist == 0:
+                        min_dist = dist
+                index_localmax = i
+        print_result()
     except ValueError:
         print("Enter numbers! Try again.")
