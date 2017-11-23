@@ -4,13 +4,13 @@
 # local maximum - the number which is greater than its neighbor
 
 
-def print_result():
-    print("list =", list)
-    print("min distance =", min_dist, "\n***\n")
+def print_result(lst, min):
+    print("list =", lst)
+    print("min distance =", min, "\n***\n")
 
 
 # getting a list as str from keyboard
-def input_check_array():
+def input_check_array(lst):
     print("Input:")
     while True:
         current = input().strip()
@@ -18,7 +18,7 @@ def input_check_array():
         if current.strip() == "exit":
             exit(0)
         if int(current) != 0:
-            list.append(int(current))
+            lst.append(int(current))
         else:
             break
 
@@ -28,7 +28,7 @@ while True:
     min_dist = 0
     list = []
     try:
-        input_check_array()
+        input_check_array(list)
         # find min distance between neighbors
         for i in range(1, len(list) - 1):
             if list[i - 1] < list[i] > list[i + 1]:
@@ -37,6 +37,6 @@ while True:
                     if min_dist > dist or min_dist == 0:
                         min_dist = dist
                 index_localmax = i
-        print_result()
+        print_result(list, min_dist)
     except ValueError:
         print("Enter numbers! Try again.")
