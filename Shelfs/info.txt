@@ -1,0 +1,4 @@
+books: 1, 4, 5
+chocolates: 1, 10, 1
+milk: 2, 47, 5
+cacao: 3, 12, 3

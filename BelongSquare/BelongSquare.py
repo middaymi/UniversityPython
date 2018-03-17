@@ -10,7 +10,7 @@ def is_point_in_square(i, j):
 
 # check an input value
 def check(s):
-    if s.__contains__("exit"): exit(0)
+    if "exit" in s: exit(0)
     elif s.isdigit: return float(s)
 
 
